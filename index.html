@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Minecraft Tips</title>
+</head>
+
+<body id="bg"
+style="
+margin:0;
+text-align:center;
+font-family:Arial;
+background:linear-gradient(to bottom right, #1e3c72, #2a5298, #6dd5ed);
+height:100vh;
+overflow:hidden;
+">
+
+  <!-- Home Page -->
+  <div id="home">
+
+    <h1
+    style="
+    color:white;
+    font-size:50px;
+    margin-top:120px;
+    text-shadow:2px 2px 10px black;
+    ">
+      Minecraft Tips
+    </h1>
+
+    <button onclick="showOptions()"
+    style="
+    background:#32cd32;
+    color:white;
+    font-size:35px;
+    padding:15px 40px;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+    box-shadow:0px 0px 20px lime;
+    ">
+      Minecraft
+    </button>
+
+  </div>
+
+  <!-- Options Page -->
+  <div id="options"
+  style="
+  display:none;
+  margin-top:180px;
+  ">
+
+    <button onclick="javaPage()"
+    style="
+    background:#ff5733;
+    color:white;
+    font-size:30px;
+    padding:12px 35px;
+    border:none;
+    border-radius:12px;
+    margin:10px;
+    cursor:pointer;
+    ">
+      Java
+    </button>
+
+    <button onclick="bedrockPage()"
+    style="
+    background:#3498db;
+    color:white;
+    font-size:30px;
+    padding:12px 35px;
+    border:none;
+    border-radius:12px;
+    margin:10px;
+    cursor:pointer;
+    ">
+      Bedrock
+    </button>
+
+  </div>
+
+  <!-- Tips Page -->
+  <div id="tipsPage"
+  style="
+  display:none;
+  padding-top:80px;
+  ">
+
+    <h1 id="title"
+style="
+color:white;
+text-shadow:0px 0px 15px black;
+font-size:50px;
+">
+</h1>
+
+    <p id="tips"
+    style="
+    font-size:24px;
+    padding:20px;
+    ">
+    </p>
+
+    <button onclick="goBack()"
+    style="
+    background:black;
+    color:white;
+    font-size:22px;
+    padding:10px 25px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    ">
+      Back
+    </button>
+
+  </div>
+
+  <script>
+
+    function showOptions() {
+
+      document.getElementById("home").style.display = "none";
+
+      document.getElementById("options").style.display = "block";
+    }
+
+    function javaPage() {
+
+      document.getElementById("options").style.display = "none";
+
+      document.getElementById("tipsPage").style.display = "block";
+
+document.getElementById("bg").style.background =
+"linear-gradient(to right, #232526, #414345)";
+
+      document.getElementById("title").innerHTML =
+      "Tips For Java";
+
+      document.getElementById("tips").innerHTML =
+      `
+      ✔ Use Carpet On Fence To Escape Mobs 😈 <br><br>
+
+      ✔ Press F3 To Find Biomes & Chunks 📍 <br><br>
+
+      ✔ Cure Zombie Villagers For OP Trades 💎 <br><br>
+
+      ✔ Use Boats To Trap Hostile Mobs 🚤 <br><br>
+
+      ✔ Water Bucket Can Save You From Falls 🌊
+      `;
+    }
+
+    function bedrockPage() {
+
+      document.getElementById("options").style.display = "none";
+
+      document.getElementById("tipsPage").style.display = "block";
+
+    document.getElementById("bg").style.background =
+"linear-gradient(to right, #134E5E, #71B280)";
+
+      document.getElementById("title").innerHTML =
+      "Tips For Bedrock";
+
+      document.getElementById("tips").innerHTML =
+      `
+      ✔ Ice + Boat = Super Fast Travel 🧊 <br><br>
+
+      ✔ Trident + Riptide Gives Speed 🌧️ <br><br>
+
+      ✔ Villagers Restock Trades Twice Daily 💰 <br><br>
+
+      ✔ Powder Snow Bucket Can Trap Mobs ❄️ <br><br>
+
+      ✔ Totem In Offhand Can Save Your Life 💀
+      `;
+    }
+
+    function goBack() {
+
+      document.getElementById("tipsPage").style.display = "none";
+
+      document.getElementById("options").style.display = "none";
+
+      document.getElementById("home").style.display = "block";
+
+      document.getElementById("bg").style.background =
+      "linear-gradient(to bottom right, #1e3c72, #2a5298, #6dd5ed)";
+    }
+
+  </script>
+
+</body>
+</html>
